@@ -6,7 +6,7 @@ import Weather from "./component/weather"
 const service = document.getElementsByName('service');
 let KEY = '767651bdaa3d4d7df7c7ecfe0a22b497';
 
-class App extends React.Component {
+class App extends React.Component{
   constructor() {
     super();
     this.state = {
@@ -26,7 +26,7 @@ class App extends React.Component {
 
   chooseService = (event) => {
     event.preventDefault();
-    for (var i = 0; i < service.length; i++) {
+    for (let i = 0; i < service.length; i++) {
       if (service[i].checked && i === 1) {
         KEY = '767651bdaa3d4d7df7c7ecfe0a22b497';
         this.setState({
@@ -37,7 +37,7 @@ class App extends React.Component {
           country: undefined,
           error: "Выбран сервис WeatherMap",
           flag: 0,
-        })
+        });
       } else if (service[i].checked && i === 0) {
         KEY = 'f59463798cb24ec18c4125132192307';
         this.setState({
@@ -48,7 +48,7 @@ class App extends React.Component {
           country: undefined,
           error: "Выбран сервис ApiXu",
           flag: 1,
-        })
+        });
       }
     }
   }
@@ -56,8 +56,8 @@ class App extends React.Component {
   rendering() {
     let time = Date.parse(new Date()) / 1000;
     let returnObj = JSON.parse(localStorage.getItem("myKey"));
-    var newTime = Date.parse(localStorage.getItem("time")) / 1000;
-    let sec = (time - newTime) / 3600;
+    let newTime = Date.parse(localStorage.getItem("time")) / 1000;
+    var sec = (time - newTime) / 3600;
     console.log(Math.floor(sec % 24));
     if (Math.floor(sec % 24 < 2)) {
       this.setState({
@@ -78,10 +78,10 @@ class App extends React.Component {
   saveLocalStorage = (states) => {
     this.setState({
       time: new Date()
-    })
+    });
     var serialObj = JSON.stringify(states);
     localStorage.setItem("myKey", serialObj);
-    localStorage.setItem("time", this.state.time)
+    localStorage.setItem("time", this.state.time);
   }
 
   getWeather = async (event) => {
@@ -90,12 +90,12 @@ class App extends React.Component {
 
     if ((city && this.state.flag === 0) && (isNaN(city))) {
       try {
-        let apiUrl = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`)
+        let apiUrl = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`);
         var data = await apiUrl.json();
       } catch (e) {
         this.setState({
           error: e.name
-        })
+        });
       }
       try {
         this.setState({
@@ -108,16 +108,16 @@ class App extends React.Component {
         });
         this.saveLocalStorage(this.state);
       } catch (e) {
-        this.checkError(e)
+        this.checkError(e);
       }
     } else if ((city && this.state.flag === 1) && (isNaN(city))) {
       try {
-        let apiUrl = await fetch(`http://api.apixu.com/v1/current.json?key=${KEY}&q=${city}`)
+        let apiUrl = await fetch(`http://api.apixu.com/v1/current.json?key=${KEY}&q=${city}`);
         data = await apiUrl.json();
       } catch (e) {
         this.setState({
           error: e.name
-        })
+        });
       }
       try {
         this.setState({
@@ -140,7 +140,7 @@ class App extends React.Component {
         pressure: undefined,
         country: undefined,
         error: "Введите название города"
-      })
+      });
     }
   }
 
@@ -148,11 +148,11 @@ class App extends React.Component {
     if (e.name === 'TypeError') {
       this.setState({
         error: "Некорректное название города!"
-      })
+      });
     } else {
       this.setState({
         error: "Повторите попытку!"
-      })
+      });
     }
   }
 
@@ -185,4 +185,4 @@ class App extends React.Component {
   }
 }
 
-export default App
+export default App;
