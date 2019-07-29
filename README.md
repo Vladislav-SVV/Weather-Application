@@ -1,11 +1,11 @@
 # Weather-Application
 ### Application of display of weather
 
-The application provides information on weather in the chosen city, with saving information on the chosen service, the city  with saving information for 2 hours.
+The application provides an information about weather in a selected city. This information  is cached for 2 hours in a browser localStorage.
 
-The possibility of change of the city is provided at any moment, information will also be saved.Information is stored on browser local storage.
+The possibility to change  the city is provided at any moment. The data will be updated in this case.
 
-For optimum operation of application it is necessary to off the  Google-translator, if he activated.
+If you face a problem with running the application try to deactivate Google-translator plugin if it's present and active.
 
 
 |File Name|Description|
