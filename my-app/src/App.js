@@ -1,7 +1,8 @@
-import React from "react"
-import Info from "./component/info"
-import Form from "./component/form"
-import Weather from "./component/weather"
+import React from "react";
+import Info from "./component/info";
+import Form from "./component/form";
+import Weather from "./component/weather";
+import PropsTypes from 'prop-types';
 
 const service = document.getElementsByName('service');
 let KEY = '767651bdaa3d4d7df7c7ecfe0a22b497';
@@ -183,6 +184,10 @@ class App extends React.Component{
       </div>
     );
   }
+}
+
+App.PropsTypes = {
+  city: PropsTypes.string
 }
 
 export default App;
