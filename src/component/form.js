@@ -1,12 +1,13 @@
-import React from "react";
-import {func} from 'prop-types';
+import React from 'react';
+import PropTypes from 'prop-types';
+
 const Form = props => (
   <div>
-    <form onClick={props.service} >
-      <div className='styleRad'>
+    <form onClick={props.service}>
+      <div className="styleRad">
         <input type="radio" name="service" value="1" />
         <label htmlFor="radio">ApiXU</label>
-        <div className='styleRad1'>
+        <div className="styleRad1">
           <input type="radio" name="service" value="2" />
           <label htmlFor="radio">Weather Map</label>
         </div>
@@ -14,14 +15,15 @@ const Form = props => (
     </form>
     <form onSubmit={props.weathterMethod}>
       <input type="text" name="city" placeholder="Город" />
-      <button >Get  weather</button>
+      <button type="submit">Get  weather</button>
     </form>
   </div>
 
 );
 
 Form.propTypes = {
-  service: func,
-  weathterMethod: func
+  service: PropTypes.func.isRequired,
+  weathterMethod: PropTypes.func.isRequired,
 };
+
 export default Form;

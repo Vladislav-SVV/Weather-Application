@@ -1,7 +1,9 @@
 {
     "extends": [
-        "plugin:react/recommended"
-      ],
+        "plugin:react/recommended",
+        "airbnb",
+        "plugin:jsx-a11y/recommended"
+    ],
     "parserOptions": {
         "ecmaVersion": 6,
         "sourceType": "module",
@@ -10,9 +12,47 @@
         }
     },
     "rules": {
+        "react/jsx-one-expression-per-line": "off",
+        "jsx-a11y/label-has-associated-control": [
+            0
+        ],
+        "linebreak-style": [
+            "error",
+            "windows"
+        ],
+        "parser": "babel-eslint",
         "semi": "error",
-        "indent": ["error", 2],
+        "indent": [
+            "error",
+            2
+        ],
         "react/jsx-uses-react": "error",
         "react/jsx-uses-vars": "error",
+        "react/jsx-filename-extension": [
+            0,
+        ],
+        "react/jsx-indent-props": [
+            2,
+            4
+        ],
+        "jsx-a11y/label-has-for": [
+            0,
+            {
+                "required": {
+                    "some": [
+                        "nesting",
+                        "id"
+                    ]
+                }
+            }
+        ],
+    },
+    "env": {
+        "browser": true,
+        "jest": true
+    },
+    "globals": {
+        "browser": true,
+        "context": true
     }
 }

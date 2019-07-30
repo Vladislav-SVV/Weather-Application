@@ -6,7 +6,7 @@ import Weather from "./component/weather";
 const service = document.getElementsByName('service');
 let KEY = '767651bdaa3d4d7df7c7ecfe0a22b497';
 
-class App extends React.Component{
+class App extends React.Component {
   constructor() {
     super();
     this.state = {
@@ -23,7 +23,7 @@ class App extends React.Component{
     document.addEventListener('DOMContentLoaded', this.rendering);
   }
 
-  chooseService=(event) => {
+  chooseService = (event) => {
     event.preventDefault();
     for (let i = 0; i < service.length; i++) {
       if (service[i].checked && i === 1) {
@@ -109,7 +109,9 @@ class App extends React.Component{
       } catch (e) {
         this.checkError(e);
       }
-    } else if ((city && this.state.flag === 1) && (isNaN(city))) {
+    }
+
+    else if ((city && this.state.flag === 1) && (isNaN(city))) {
       try {
         let apiUrl = await fetch(`http://api.apixu.com/v1/current.json?key=${KEY}&q=${city}`);
         data = await apiUrl.json();
@@ -144,7 +146,7 @@ class App extends React.Component{
   }
 
   checkError(e) {
-    if (e.name==='TypeError') {
+    if (e.name === 'TypeError') {
       this.setState({
         error: "Некорректное название города!"
       });
