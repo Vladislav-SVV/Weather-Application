@@ -1,5 +1,5 @@
 import React from "react";
-import {string,number} from 'prop-types';
+import {string, number} from 'prop-types';
 
 const Weather = props => (
   <div>
