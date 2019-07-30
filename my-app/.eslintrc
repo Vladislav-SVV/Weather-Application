@@ -1,9 +1,0 @@
-{
-    "extends" : "airbnb/base",
-    "rules": {
-        "semi": "error",
-        "array-bracket-newline": ["error", "always"],
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-    }
-}

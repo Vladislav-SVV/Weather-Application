@@ -1,0 +1,18 @@
+{
+    "extends": [
+        "plugin:react/recommended"
+      ],
+    "parserOptions": {
+        "ecmaVersion": 6,
+        "sourceType": "module",
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
+    "rules": {
+        "semi": "error",
+        "indent": ["error", 2],
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error",
+    }
+}

@@ -2,7 +2,6 @@ import React from "react";
 import Info from "./component/info";
 import Form from "./component/form";
 import Weather from "./component/weather";
-import PropsTypes from 'prop-types';
 
 const service = document.getElementsByName('service');
 let KEY = '767651bdaa3d4d7df7c7ecfe0a22b497';
@@ -19,13 +18,12 @@ class App extends React.Component{
       error: "Выберите сервис погоды",
       flag: undefined,
       time: new Date()
-    }
+    };
     this.rendering = this.rendering.bind(this);
     document.addEventListener('DOMContentLoaded', this.rendering);
   }
 
-
-  chooseService = (event) => {
+  chooseService=(event) => {
     event.preventDefault();
     for (let i = 0; i < service.length; i++) {
       if (service[i].checked && i === 1) {
@@ -131,7 +129,7 @@ class App extends React.Component{
         });
         this.saveLocalStorage(this.state);
       } catch (e) {
-        this.checkError(e)
+        this.checkError(e);
       }
     } else {
       this.setState({
@@ -146,7 +144,7 @@ class App extends React.Component{
   }
 
   checkError(e) {
-    if (e.name === 'TypeError') {
+    if (e.name==='TypeError') {
       this.setState({
         error: "Некорректное название города!"
       });
@@ -186,8 +184,5 @@ class App extends React.Component{
   }
 }
 
-App.PropsTypes = {
-  city: PropsTypes.string
-}
 
 export default App;
