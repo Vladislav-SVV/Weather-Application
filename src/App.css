@@ -1,0 +1,268 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:500&display=swap" rel="stylesheet');
+
+
+body {
+    font-family: 'Oswald', sans-serif;
+    
+}
+
+.wrapper {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items:  center;
+    background: rgba(242,246,248,1);
+    background: -moz-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 12%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(242,246,248,1)), color-stop(12%, rgba(216,225,231,1)), color-stop(51%, rgba(181,198,208,1)), color-stop(100%, rgba(224,239,249,1)));
+    background: -webkit-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 12%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);
+    background: -o-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 12%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);
+    background: -ms-linear-gradient(left, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 12%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);
+    background: linear-gradient(to right, rgba(242,246,248,1) 0%, rgba(216,225,231,1) 12%, rgba(181,198,208,1) 51%, rgba(224,239,249,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f2f6f8', endColorstr='#e0eff9', GradientType=1 );
+}
+
+/*.main {
+  height: 50vh;
+  background: #2a6bb1;
+  width: 50%;
+  -webkit-box-shadow: -17px 9px 20px 2px rgba(0,0,0,0.75);
+  -moz-box-shadow: -17px 9px 20px 2px rgba(0,0,0,0.75);
+  box-shadow: -17px 9px 20px 2px rgba(0,0,0,0.75);
+  
+  margin: 0 auto;
+  border-radius: 26px 79px 144px 26px;
+  -moz-border-radius: 26px 79px 144px 26px;
+  -webkit-border-radius: 26px 79px 144px 26px;
+}*/
+
+.info {
+  height: 55vh;
+  background: url("img/grape.png") center center no-repeat  ;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  color: #fafafa;
+  border-radius: 26px  144px;
+}
+
+.container{
+  background: url("img/weather.jpeg") center  no-repeat;
+  background-size: cover;
+  border-radius:144px 144px 55px  ;
+}
+
+.form {
+  height: 50vh;
+  padding-top: 30px;
+  padding-left: 50px;
+  border-radius:160px 40px;
+  
+}
+input[type="radio"] {
+  cursor:pointer;
+}
+
+input[type="radio"]:active {
+  position: relative;
+  top: 2px;
+}
+
+input[type="text"] {
+    
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 2px #113a65;
+    width: 40%;
+    padding-bottom: 4px;
+    color: #fff;
+    font-weight: lighter;
+    margin-bottom: 30px;
+    margin-right: 20px;
+    font-size: 20px;
+    outline: none;
+  }
+
+input:active {
+    background-color: transparent;
+    border: 0;
+    border-bottom: solid 2px #113a65;
+  }
+
+input::-webkit-input-placeholder {
+    color: #103a65;
+  }
+  
+input::-moz-placeholder {
+    color: #103a65;
+  }
+
+button {
+    border: 2px solid #103a65;
+    border-bottom: 4px solid #103a65;
+    padding: 8px 20px;
+    margin: 0 2px;
+    border-radius: 2px;
+    cursor: pointer;
+    background-color: #235d9c;
+    color: #fff;
+    outline: none!important;
+  }
+  
+button:hover {
+    border-bottom: 2px solid #103a65;
+    position: relative;
+    top: 2px;
+  }
+  
+button:active {
+    border-bottom: 2px solid transparent;
+    border-color: transparent;
+    position: relative;
+    top: 2px;
+  }
+
+@media only screen and (max-width : 1400px),
+only screen and (max-device-width: 1400px){
+    .info {width: 50%;
+           height: 59vh;
+          }
+    .form {width: 50%;}
+    .info h2 {margin: 100px ;}    
+  }
+
+@media only screen and (max-width : 1200px),
+only screen and (max-device-width: 1200px){
+    .info {width: 50%;
+           height: 59vh;
+          }
+    .form {width: 50%;}
+    .info h2 {margin: 100px ;}   
+  }
+
+@media only screen and (max-width : 940px),
+only screen and (max-device-width: 940px){
+  .container {
+    background: none;
+    }
+  
+  .info {width: 50%;
+         background: none;}
+  .form {width: 50%;}
+  .info h2 {margin: 70px ;}
+}
+
+@media only screen and (max-width : 720px),
+only screen and (max-device-width : 720px){
+  .container {
+    background: none;
+    }
+  .info {width: 29.33333%;
+         background:none;
+        }
+  .info h2 {font-size: 33px ;
+            margin: 50px ;
+          }
+  .form {padding-top: 0px;
+         padding-left: 0px;
+         margin-left: auto;
+         width: 29.33333%;
+        }
+  input[type="text"] {width: 100%;}
+  button {width: 90.33333%;
+          font-size: 14px ;
+          height:50px;
+          margin-top:0px;
+          margin-bottom:5px;
+          }
+  .weath {font-size: 16px ;}
+  .container{margin-left: auto;
+             margin-right: auto;
+            }
+  input[type ="radio"] {margin-bottom: 20px;}
+  .styleRad{margin-top:20px;}
+}
+
+@media only screen and (max-width : 768px),
+only screen and (max-device-width : 768px){
+  .info {width: 29.33333%;}
+  .container {
+    background: none;
+    }
+  .info h2 {font-size: 33px;
+            margin: 50px ;
+          }
+  .form {width: 29.33333%;
+        margin-left: auto;
+        margin-right: auto;
+        padding-top: 0px;
+        padding-left: 0px;
+      }
+  input[type="text"] {width: 100%;}
+  button {width: 90.33333%;
+          margin-bottom:5px;
+          font-size: 14px ;
+          height:50px;
+          margin-top:0px;
+         }
+  .weath {font-size: 16px ;}
+  .container{margin-left: auto;
+             margin-right: auto;
+            }
+  input[type ="radio"] {margin-bottom: 20px;}
+  .styleRad{margin-top:20px;}
+}
+
+@media only screen and (max-width : 530px),
+only screen and (max-device-width : 530px){
+  .container {
+        background: none;
+        }
+  .info {width: none;
+        background: none;
+        }
+  .info h2 {font-size: 33px;
+            margin: 50px ;
+            }
+  .form {width: 29.33333%;
+        padding-top: 0px;
+        padding-left: 0px;
+        }
+  input[type="text"] {width: 100%;}
+  button {width: 90.33333%;
+          font-size: 12px ;
+          height:50px;
+          margin-top:0px;
+          margin-bottom:5px;
+        }
+  .weath {font-size: 13px ;}
+  .container{margin-left: auto;
+            margin-right: auto;
+        }
+  label {font-size:12px;}
+}
+
+@media only screen and (max-width : 320px),
+only screen and (max-device-width : 320px){
+  .container {
+    background: none;
+    }
+  .info h2 {font-size: 23px;
+            margin: 50px ;
+          }
+  .info {width: 19.33333%;}
+  .form {width: 29.33333%;
+         padding-top: 0px;
+         padding-left: 0px;}
+  input[type="text"] {width: 100%;}
+  button {width: 90.33333%;
+          font-size: 10px ;
+          height:30px;
+          margin-top:0px;
+          margin-bottom:5px;
+        }
+  .weath {font-size: 13px ;}
+  .container{margin-left: auto;
+             margin-right: auto;
+            }
+  label{font-size:12px;}
+}
