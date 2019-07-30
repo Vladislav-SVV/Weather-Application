@@ -20,7 +20,8 @@ const Form = props => (
 
 );
 
-Form.propsTypes = {
-  service: func
+Form.propTypes = {
+  service: func,
+  weathterMethod: func
 };
 export default Form;
