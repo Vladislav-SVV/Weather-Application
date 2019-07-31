@@ -3,12 +3,12 @@ import PropTypes from 'prop-types';
 
 const Form = props => (
   <div>
-    <form onClick={props.service}>
+    <form>
       <div className="styleRad">
-        <input type="radio" name="service" value="1" />
+        <input onClick={props.service} type="radio" name="service" value="1" />
         <label htmlFor="radio">ApiXU</label>
         <div className="styleRad1">
-          <input type="radio" name="service" value="2" />
+          <input onClick={props.service} type="radio" name="service" value="2" />
           <label htmlFor="radio">Weather Map</label>
         </div>
       </div>

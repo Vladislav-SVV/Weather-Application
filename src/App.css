@@ -43,6 +43,7 @@ body {
   align-items: center;
   color: #fafafa;
   border-radius: 26px  144px;
+  align-items: center;
 }
 
 .container{
@@ -214,13 +215,17 @@ only screen and (max-device-width : 768px){
 
 @media only screen and (max-width : 530px),
 only screen and (max-device-width : 530px){
+  .wrapper {
+        height: 530px;
+        
+        }
   .container {
         background: none;
         }
   .info {width: none;
         background: none;
         }
-  .info h2 {font-size: 33px;
+  .info h2 {font-size: 25px;
             margin: 50px ;
             }
   .form {width: 29.33333%;
@@ -246,7 +251,7 @@ only screen and (max-device-width : 320px){
   .container {
     background: none;
     }
-  .info h2 {font-size: 23px;
+  .info h2 {font-size: 17px;
             margin: 50px ;
           }
   .info {width: 19.33333%;}

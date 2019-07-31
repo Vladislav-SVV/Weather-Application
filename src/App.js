@@ -56,7 +56,7 @@ class App extends React.Component {
     let time = Date.parse(new Date()) / 1000;
     let returnObj = JSON.parse(localStorage.getItem("myKey"));
     let newTime = Date.parse(localStorage.getItem("time")) / 1000;
-    var sec = (time - newTime) / 3600;
+    let sec = (time - newTime) / 3600;
     console.log(Math.floor(sec % 24));
     if (Math.floor(sec % 24 < 2)) {
       this.setState({
@@ -78,19 +78,20 @@ class App extends React.Component {
     this.setState({
       time: new Date()
     });
-    var serialObj = JSON.stringify(states);
+    let serialObj = JSON.stringify(states);
     localStorage.setItem("myKey", serialObj);
     localStorage.setItem("time", this.state.time);
   }
 
   getWeather = async (event) => {
     event.preventDefault();
-    var city = event.target.elements.city.value;
+    let city = event.target.elements.city.value;
+    let data = '';
 
     if ((city && this.state.flag === 0) && (isNaN(city))) {
       try {
         let apiUrl = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${KEY}&units=metric`);
-        var data = await apiUrl.json();
+        data = await apiUrl.json();
       } catch (e) {
         this.setState({
           error: e.name

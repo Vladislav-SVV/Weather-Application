@@ -12,6 +12,10 @@
         }
     },
     "rules": {
+        "react/destructuring-assignment": [
+            0,
+            "always"
+        ],
         "react/jsx-one-expression-per-line": "off",
         "jsx-a11y/label-has-associated-control": [
             0
