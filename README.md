@@ -14,7 +14,7 @@ If you face a problem with running the application try to deactivate Google-tran
 |/src/components/info.js|**simple file with the name App**|
 |/src/components/form.js|**form with the entry field of the city and the choice of service**
 
+# START APPLICATION
 
-
-
+from a project directory, in a command line start command  ***npm start***
 
