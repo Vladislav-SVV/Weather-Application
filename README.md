@@ -16,5 +16,5 @@ If you face a problem with running the application try to deactivate Google-tran
 
 # START APPLICATION
 
-From a project directory, in a command line start command  ***npm start***
+From a project directory, in a command line start command [**npm start**](https://docs.npmjs.com/cli/start.html "Start a package")  
 
